@@ -1,0 +1,77 @@
+{
+  "expo": {
+    "name": "knowledge-temple",
+    "slug": "knowledge-temple",
+    "version": "1.0.3",
+    "orientation": "portrait",
+    "icon": "./assets/Splash.png",
+    "splash": {
+      "image": "./assets/Splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#387ade"
+    },
+    "platforms": ["ios", "android"],
+    "assetBundlePatterns": ["**/*"],
+    "scheme": "myapp",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/Splash (1).png",
+        "backgroundColor": "#387ade"
+      },
+      "package": "com.phrubel42.knowledgetemple",
+      "versionCode": 5
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/Splash.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/Splash (1).png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#387ade"
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "usesCleartextTraffic": true
+          },
+          "ios": {
+            "infoPlist": {
+              "NSAppTransportSecurity": {
+                "NSAllowsArbitraryLoads": true
+              }
+            },
+            "supportsTablet": true
+          }
+        }
+      ],
+      "expo-font",
+      "expo-web-browser"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "owner": "shahadat25",
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "57c372a1-4aaa-4edf-9586-274588a44a6b"
+      }
+    }
+  }
+}
